@@ -8,18 +8,18 @@ A **MkDocs + Material** static documentation site: a wiki for a culinary program
 
 ## Commands
 
+Bare `mkdocs` and `pip` are not on PATH in this environment — invoke through the interpreter with `python -m`:
+
 ```bash
-mkdocs serve     # Live-reloading preview at http://127.0.0.1:8000 (use this while editing)
-mkdocs build     # Render the static site into ./site (fails on broken config/plugins)
-mkdocs build --strict   # Treat warnings (e.g. broken links) as errors
+python -m mkdocs serve            # Live-reloading preview at http://127.0.0.1:8000 (use while editing)
+python -m mkdocs build            # Render the static site into ./site (fails on broken config/plugins)
+python -m mkdocs build --strict   # Treat warnings (e.g. broken links) as errors
 ```
 
-There is no `requirements.txt`. `mkdocs.yml` enables several third-party plugins that must be installed first, or every command fails at startup:
+Install dependencies from the pinned list before the first build:
 
 ```bash
-pip install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-macros-plugin \
-  mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin \
-  mkdocs-exclude mkdocs-print-site-plugin
+python -m pip install -r requirements.txt
 ```
 
 ## Architecture
