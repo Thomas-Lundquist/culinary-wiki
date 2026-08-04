@@ -1,0 +1,20 @@
+/* Skyline Eagles brand palette, sampled from the school logo.
+   Navy #0C2448 (primary), Gold #CC9000 (accent). */
+
+:root {
+  --md-primary-fg-color:        #0C2448;
+  --md-primary-fg-color--light: #16346A;
+  --md-primary-fg-color--dark:  #081830;
+  --md-accent-fg-color:         #CC9000;
+  --md-accent-fg-color--transparent: rgba(204, 144, 0, 0.1);
+}
+
+/* Keep gold accents readable on the dark (slate) scheme too. */
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: #E0A415;
+}
+
+/* Give the logo a little breathing room in the header. */
+.md-header__button.md-logo img {
+  height: 2rem;
+}
