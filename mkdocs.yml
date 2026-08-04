@@ -5,7 +5,7 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   logo: assets/logo.png
-  favicon: assets/logo.png
+  favicon: assets/favicon.png
   features:
     - navigation.tabs        # Top-level tabs: Core | Food & Nutrition | Culinary 1 | Culinary 2
     - navigation.sections
