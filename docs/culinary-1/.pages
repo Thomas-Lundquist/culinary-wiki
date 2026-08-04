@@ -1,5 +1,7 @@
+title: Culinary 1
 nav:
-  - Knife Cuts: knife-cuts
+  - index.md
+  - Knives and Knife Cuts: knives
   - Cooking Techniques: cooking-techniques
   - Stocks & Sauces: stocks-sauces
   - Yeast Breads: yeast-breads

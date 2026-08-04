@@ -2,7 +2,7 @@
 title:
 tags: []
 ---
-# [Topic Name]
+# Topic Name
 
 One sentence: what this topic cluster covers.
 

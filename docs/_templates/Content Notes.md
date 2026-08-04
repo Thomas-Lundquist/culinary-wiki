@@ -2,7 +2,7 @@
 title:
 tags:
 ---
-# [Page Title]
+# Content Title
 
 One-sentence definition or framing — what is this, in plain terms.
 

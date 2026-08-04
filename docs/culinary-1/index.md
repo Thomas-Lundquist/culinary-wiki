@@ -10,7 +10,7 @@ One or two sentences: what this section covers and who it's for.
 ## What's Here
 
 - **[Cooking Techniques](cooking-techniques/index.md)** one-line description
-- **[Knife Cuts](knife-cuts/index.md)** one-line description
+- **[Knife Cuts](knives/index.md)** one-line description
 - **[Stocks & Sauces](stocks-sauces/index.md)** one-line description
 - **[Recipe Scaling](recipe-scaling.md)** one-line description
 - **[Yeast Breads](yeast-breads/index.md)** one-line description

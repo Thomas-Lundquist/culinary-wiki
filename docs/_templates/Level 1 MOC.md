@@ -2,7 +2,7 @@
 title:
 tags: []
 ---
-# [Section Name]
+# Section Name
 
 One or two sentences: what this section covers and who it's for.
 

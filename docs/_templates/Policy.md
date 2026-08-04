@@ -2,7 +2,7 @@
 title:
 tags:
 ---
-# [Course Name] Policies
+# Course Policies
 
 Course-specific. For shared safety/professionalism baseline, see
 [Core Skills](../core/index.md).

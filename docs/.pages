@@ -1,7 +1,7 @@
 nav:
   - Home: index.md
-  - Core Skills: core
-  - Food & Nutrition: food-nutrition
-  - Culinary 1: culinary-1
-  - Culinary 2: culinary-2
+  - core
+  - food-nutrition
+  - culinary-1
+  - culinary-2
   - Glossary: glossary.md
