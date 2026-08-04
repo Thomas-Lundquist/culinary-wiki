@@ -10,14 +10,6 @@ theme:
   palette:
     - scheme: default
 
-nav:
-  - Home: index.md
-  - Core Skills: core/
-  - Food & Nutrition: food-nutrition/
-  - Culinary 1: culinary-1/
-  - Culinary 2: culinary-2/
-  - Glossary: glossary.md
-
 plugins:
   - search
   - tags
@@ -25,9 +17,9 @@ plugins:
   - glightbox
   - git-revision-date-localized:
       type: date
-  - print-site
   - macros
   - callouts
   - exclude:
       glob:
         - drafts/*
+  - print-site

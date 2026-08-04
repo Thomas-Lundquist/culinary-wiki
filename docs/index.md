@@ -1,17 +1,14 @@
-# Welcome to MkDocs
+# Culinary Program Wiki
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Your reference guide for the culinary program — from kitchen safety fundamentals to advanced service and production. Use the tabs above or the sections below to jump in.
 
-## Commands
+## Sections
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- **[Core Skills](core/)** — Safety, sanitation, measurement, equipment, mise en place, and professionalism. Start here.
+- **[Food & Nutrition](food-nutrition/)** — Nutrition guidelines and everyday cooking methods.
+- **[Culinary 1](culinary-1/)** — Knife cuts, cooking techniques, stocks & sauces, and baking foundations.
+- **[Culinary 2](culinary-2/)** — Quantity food production, dining room management, and customer service.
+- **[Glossary](glossary.md)** — Key terms and definitions.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+> [!tip] New here?
+> Work through **Core Skills** first — kitchen safety and sanitation are the foundation for everything in Culinary 1 and 2.

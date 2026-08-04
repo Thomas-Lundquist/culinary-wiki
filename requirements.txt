@@ -1,0 +1,27 @@
+# MkDocs and the plugins declared in mkdocs.yml.
+# Install with: pip install -r requirements.txt
+mkdocs>=1.6
+mkdocs-material>=9.5
+
+# Navigation from .pages.yml files
+mkdocs-awesome-pages-plugin>=2.9
+
+# Jinja2 {{ }} macros in Markdown
+mkdocs-macros-plugin>=1.0
+
+# Obsidian-style > [!note] callouts
+mkdocs-callouts>=1.13
+
+# Image lightboxes
+mkdocs-glightbox>=0.4
+
+# Per-page "last updated" dates from git history
+mkdocs-git-revision-date-localized-plugin>=1.2
+
+# Exclude drafts/* from the build
+mkdocs-exclude>=1.0
+
+# Combined printable / single-page export
+mkdocs-print-site-plugin>=2.5
+
+# Note: the "search" and "tags" plugins are built into mkdocs/mkdocs-material — no separate install.
