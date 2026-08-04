@@ -1,5 +1,5 @@
 ---
-title: Myplate
+title: MyPlate
 tags: []
 ---
 

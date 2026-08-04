@@ -1,5 +1,5 @@
 ---
-title: Cleaning Vs Sanitizing
+title: Cleaning vs. Sanitizing
 tags: []
 ---
 

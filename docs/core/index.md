@@ -1,8 +1,8 @@
 ---
-title: Core
+title: Core Skills
 tags: []
 ---
-# Core
+# Core Skills
 
 All the basics of ***any*** culinary course - Equipment, Safety, Measurement, Mise en Place, Professionalism, and Sanitation.
 ## What's Here
@@ -13,6 +13,3 @@ All the basics of ***any*** culinary course - Equipment, Safety, Measurement, Mi
 - **[Kitchen Professionalism](professionalism/index.md)**
 - **[Kitchen Safety](kitchen-safety/index.md)**
 - **[Kitchen Sanitation](sanitation/index.md)**
-## Related
-
-- [Link to relevant core section if applicable](index.md)

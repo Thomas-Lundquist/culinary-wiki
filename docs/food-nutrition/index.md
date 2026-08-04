@@ -1,12 +1,12 @@
 ---
-title: Food & Nutrition Index
+title: Food & Nutrition
 tags: []
 ---
 # Food & Nutrition
 
 One or two sentences: what this section covers and who it's for.
 
-**[Class Policies](policies.md)
+**[Class Policies](policies.md)**
 ## What's Here
 
 - **[Cooking Methods](cooking-methods/index.md)** — one-line description

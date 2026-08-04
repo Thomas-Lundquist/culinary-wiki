@@ -1,8 +1,8 @@
 ---
-title: Culinary Program Wiki
+title: Home
 tags:
 ---
-# Culinary Program Wiki
+# Home
 
 Your reference guide for the culinary program — from kitchen safety fundamentals to advanced service and production. Use the tabs above or the sections below to jump in.
 

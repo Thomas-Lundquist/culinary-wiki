@@ -27,7 +27,7 @@ python -m pip install -r requirements.txt
 
 ## Architecture
 
-- **Navigation is NOT in `properdocs.yml`.** The `awesome-pages` plugin builds the nav from `.pages.yml` files placed in `docs/` directories. Edit `docs/.pages.yml` (and any nested `.pages.yml`) to change ordering/titles — do not add a `nav:` block to `properdocs.yml`.
+- **Navigation is NOT in `properdocs.yml`.** The `awesome-pages` plugin builds the nav from `.pages` files placed in `docs/` directories (the plugin's default filename — the extensionless `.pages`, NOT `.pages.yml`; a `.pages.yml` is silently ignored and the nav falls back to sentence-cased folder names). Edit `docs/.pages` (and any nested `.pages`) to change ordering/titles — do not add a `nav:` block to `properdocs.yml`. A folder's nav label comes from its parent's `.pages` `nav:` entry (or a `title:` in its own `.pages`), NOT from its `index.md` front-matter; individual page labels come from each file's front-matter `title:`.
 - **Content is organized by course**, each a top-level section shown as a navigation tab (`navigation.tabs` feature): `core/` (Core Skills), `food-nutrition/`, `culinary-1/`, `culinary-2/`. `glossary.md` and `index.md` sit at the `docs/` root.
 - **Section landing pages** are `index.md` files inside each folder.
 - **`drafts/*` is excluded from builds** via the `exclude` plugin — put work-in-progress pages under a `drafts/` folder to keep them out of the published site.

@@ -1,5 +1,5 @@
 ---
-title: Hard Vs Soft Skills
+title: Hard vs. Soft Skills
 tags: []
 ---
 
