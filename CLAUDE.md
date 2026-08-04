@@ -35,6 +35,6 @@ python -m pip install -r requirements.txt
 
 ## Authoring conventions
 
-- Callouts use the `callouts` plugin syntax (Obsidian-style `> [!note]` blocks), not raw Material admonitions.
+- Callouts use the `callouts` plugin syntax (Obsidian-style `> [!note]` blocks), not raw Material admonitions. The `callouts` plugin only *rewrites* these into `!!! note` admonition syntax — the `admonition` markdown extension (in `markdown_extensions:` in `properdocs.yml`) is what actually renders them. If that extension is removed, callouts silently pass through as literal `!!! note` text instead of erroring.
 - Image lightboxes come from `glightbox` automatically — just use standard Markdown images.
 - The `macros` plugin is enabled, so `{{ ... }}` in Markdown is treated as a Jinja2 expression; escape literal double braces if you need them as text.

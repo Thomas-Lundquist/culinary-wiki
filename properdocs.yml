@@ -24,6 +24,11 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+markdown_extensions:
+  - admonition            # Renders the `!!! tip` blocks the callouts plugin emits
+  - pymdownx.details      # Collapsible callouts (`> [!note]-`)
+  - pymdownx.superfences  # Nested code/content inside callouts; Material standard
+
 plugins:
   - search
   - tags
