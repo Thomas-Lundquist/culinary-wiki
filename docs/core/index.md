@@ -15,5 +15,4 @@ All the basics of ***any*** culinary course - Equipment, Safety, Measurement, Mi
 - **[Kitchen Sanitation](sanitation/index.md)**
 ## Related
 
-- [Link to relevant core section if applicable](index.md)# Core
-
+- [Link to relevant core section if applicable](index.md)
