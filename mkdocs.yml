@@ -1,14 +1,30 @@
 site_name: Culinary Program Wiki
+repo_url: https://github.com/Thomas-Lundquist/culinary-wiki
+repo_name: Thomas-Lundquist/culinary-wiki
+edit_uri: edit/main/docs/
 theme:
   name: material
   features:
     - navigation.tabs        # Top-level tabs: Core | Food & Nutrition | Culinary 1 | Culinary 2
     - navigation.sections
+    - navigation.indexes     # Section landing pages (index.md) are clickable as the section
+    - navigation.instant     # SPA-style instant page loads
+    - navigation.top         # "Back to top" button on scroll
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.action.edit    # Render the "edit this page" pencil (needs repo_url + edit_uri)
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 plugins:
   - search
