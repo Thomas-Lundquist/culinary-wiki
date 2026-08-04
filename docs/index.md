@@ -4,10 +4,10 @@ Your reference guide for the culinary program — from kitchen safety fundamenta
 
 ## Sections
 
-- **[Core Skills](core/)** — Safety, sanitation, measurement, equipment, mise en place, and professionalism. Start here.
-- **[Food & Nutrition](food-nutrition/)** — Nutrition guidelines and everyday cooking methods.
-- **[Culinary 1](culinary-1/)** — Knife cuts, cooking techniques, stocks & sauces, and baking foundations.
-- **[Culinary 2](culinary-2/)** — Quantity food production, dining room management, and customer service.
+- **[Core Skills](core/index.md)** — Safety, sanitation, measurement, equipment, mise en place, and professionalism. Start here.
+- **[Food & Nutrition](food-nutrition/index.md)** — Nutrition guidelines and everyday cooking methods.
+- **[Culinary 1](culinary-1/index.md)** — Knife cuts, cooking techniques, stocks & sauces, and baking foundations.
+- **[Culinary 2](culinary-2/index.md)** — Quantity food production, dining room management, and customer service.
 - **[Glossary](glossary.md)** — Key terms and definitions.
 
 > [!tip] New here?
