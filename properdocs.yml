@@ -36,6 +36,9 @@ plugins:
   - exclude:
       glob:
         - drafts/*
+  - redirects:
+      redirect_maps:
+        # 'old/path.md': 'new/path.md'   # add mappings when you move/rename a page
   - print-site
 
 extra_css:

@@ -4,16 +4,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A **MkDocs + Material** static documentation site: a wiki for a culinary program. There is no application code — content lives in Markdown under `docs/`, and the build renders it to a static HTML site. Work here is mostly editing/adding Markdown pages and adjusting navigation.
+A **ProperDocs + Material** static documentation site: a wiki for a culinary program. There is no application code — content lives in Markdown under `docs/`, and the build renders it to a static HTML site. Work here is mostly editing/adding Markdown pages and adjusting navigation.
+
+> [!note] Build driver is ProperDocs, not MkDocs
+> The site is built with **ProperDocs** — a drop-in continuation of MkDocs 1.x — driven from `properdocs.yml`. The `mkdocs` library and the `mkdocs-material` theme are still installed underneath (ProperDocs and the plugins depend on them); ProperDocs just replaces the CLI/build driver. Use `python -m properdocs`, not `python -m mkdocs`.
 
 ## Commands
 
-Bare `mkdocs` and `pip` are not on PATH in this environment — invoke through the interpreter with `python -m`:
+Bare `properdocs` and `pip` are not on PATH in this environment — invoke through the interpreter with `python -m`:
 
 ```bash
-python -m mkdocs serve            # Live-reloading preview at http://127.0.0.1:8000 (use while editing)
-python -m mkdocs build            # Render the static site into ./site (fails on broken config/plugins)
-python -m mkdocs build --strict   # Treat warnings (e.g. broken links) as errors
+python -m properdocs serve            # Live-reloading preview at http://127.0.0.1:8000 (use while editing)
+python -m properdocs build            # Render the static site into ./site (fails on broken config/plugins)
+python -m properdocs build --strict   # Treat warnings (e.g. broken links) as errors
 ```
 
 Install dependencies from the pinned list before the first build:
@@ -24,7 +27,7 @@ python -m pip install -r requirements.txt
 
 ## Architecture
 
-- **Navigation is NOT in `mkdocs.yml`.** The `awesome-pages` plugin builds the nav from `.pages.yml` files placed in `docs/` directories. Edit `docs/.pages.yml` (and any nested `.pages.yml`) to change ordering/titles — do not add a `nav:` block to `mkdocs.yml`.
+- **Navigation is NOT in `properdocs.yml`.** The `awesome-pages` plugin builds the nav from `.pages.yml` files placed in `docs/` directories. Edit `docs/.pages.yml` (and any nested `.pages.yml`) to change ordering/titles — do not add a `nav:` block to `properdocs.yml`.
 - **Content is organized by course**, each a top-level section shown as a navigation tab (`navigation.tabs` feature): `core/` (Core Skills), `food-nutrition/`, `culinary-1/`, `culinary-2/`. `glossary.md` and `index.md` sit at the `docs/` root.
 - **Section landing pages** are `index.md` files inside each folder.
 - **`drafts/*` is excluded from builds** via the `exclude` plugin — put work-in-progress pages under a `drafts/` folder to keep them out of the published site.

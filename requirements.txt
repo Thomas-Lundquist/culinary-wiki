@@ -1,5 +1,7 @@
-# MkDocs and the plugins declared in mkdocs.yml.
+# ProperDocs (MkDocs 1.x continuation) is the build driver; mkdocs + material
+# stay installed underneath because properdocs and the plugins depend on them.
 # Install with: pip install -r requirements.txt
+properdocs>=1.6.7
 mkdocs>=1.6
 mkdocs-material>=9.5
 
@@ -23,5 +25,8 @@ mkdocs-exclude>=1.0
 
 # Combined printable / single-page export
 mkdocs-print-site-plugin>=2.5
+
+# Old-URL -> new-URL redirects (pulls in `properdocs`, the ProperDocs-org MkDocs fork)
+mkdocs-redirects>=1.2.3
 
 # Note: the "search" and "tags" plugins are built into mkdocs/mkdocs-material — no separate install.
