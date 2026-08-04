@@ -1,7 +1,4 @@
 site_name: Culinary Program Wiki
-repo_url: https://github.com/Thomas-Lundquist/culinary-wiki
-repo_name: Thomas-Lundquist/culinary-wiki
-edit_uri: edit/main/docs/
 theme:
   name: material
   logo: assets/logo.png
@@ -15,7 +12,6 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.action.edit    # Render the "edit this page" pencil (needs repo_url + edit_uri)
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
