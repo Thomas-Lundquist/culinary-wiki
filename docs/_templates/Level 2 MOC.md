@@ -1,8 +1,8 @@
 ---
-title: Equipment Home
-tags:
+title:
+tags: []
 ---
-# # [Equipment Home]
+# [Topic Name]
 
 One sentence: what this topic cluster covers.
 

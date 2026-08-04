@@ -1,8 +1,8 @@
 ---
-title: Equipment Home
-tags:
+title: Appetizers, Salads & Sandwiches
+tags: []
 ---
-# # [Equipment Home]
+# Appetizers, Salads & Sandwiches
 
 One sentence: what this topic cluster covers.
 

@@ -1,8 +1,8 @@
 ---
-title: Equipment Home
-tags:
+title: Knife Cuts
+tags: []
 ---
-# # [Equipment Home]
+# Knife Cuts
 
 One sentence: what this topic cluster covers.
 

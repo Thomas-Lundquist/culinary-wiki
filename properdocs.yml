@@ -36,6 +36,7 @@ plugins:
   - exclude:
       glob:
         - drafts/*
+        - _templates/*
   - redirects:
       redirect_maps:
         # 'old/path.md': 'new/path.md'   # add mappings when you move/rename a page

@@ -1,8 +1,8 @@
 ---
-title: Equipment Home
-tags:
+title: Cooking Techniques
+tags: []
 ---
-# # [Equipment Home]
+# Cooking Techniques
 
 One sentence: what this topic cluster covers.
 

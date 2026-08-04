@@ -1,8 +1,8 @@
 ---
-title: Equipment Home
-tags:
+title: Commercial Equipment
+tags: []
 ---
-# # [Equipment Home]
+# Commercial Equipment
 
 One sentence: what this topic cluster covers.
 

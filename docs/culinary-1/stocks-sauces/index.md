@@ -1,8 +1,8 @@
 ---
-title: Equipment Home
-tags:
+title: Stocks & Sauces
+tags: []
 ---
-# # [Equipment Home]
+# Stocks & Sauces
 
 One sentence: what this topic cluster covers.
 

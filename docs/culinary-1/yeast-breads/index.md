@@ -1,8 +1,8 @@
 ---
-title: Equipment Home
-tags:
+title: Yeast Breads Index
+tags: []
 ---
-# # [Equipment Home]
+# [Yeast Breads]
 
 One sentence: what this topic cluster covers.
 

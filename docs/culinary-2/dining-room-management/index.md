@@ -1,8 +1,8 @@
 ---
-title: Equipment Home
-tags:
+title: Dining Room Management
+tags: []
 ---
-# # [Equipment Home]
+# Dining Room Management
 
 One sentence: what this topic cluster covers.
 

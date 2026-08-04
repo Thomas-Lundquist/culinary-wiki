@@ -1,8 +1,17 @@
 ---
-title: Index
+title: Food & Nutrition Index
 tags: []
 ---
+# Food & Nutrition
 
-# Index
+One or two sentences: what this section covers and who it's for.
 
-> TODO: fill in content
+**[Class Policies](policies.md)
+## What's Here
+
+- **[Cooking Methods](cooking-methods/index.md)** — one-line description
+- **[Nutrition Guidelines](nutrition-guidelines/index.md)** — one-line description
+
+## Related
+
+- [Link to relevant core section if applicable](../core/index.md)
