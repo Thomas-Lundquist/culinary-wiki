@@ -5,10 +5,11 @@ theme:
   favicon: assets/favicon.png
   features:
     - navigation.tabs        # Top-level tabs: Core | Food & Nutrition | Culinary 1 | Culinary 2
-    - navigation.sections
+    - navigation.tabs.sticky # Tab bar stays pinned to the header while scrolling
     - navigation.indexes     # Section landing pages (index.md) are clickable as the section
     - navigation.instant     # SPA-style instant page loads
     - navigation.top         # "Back to top" button on scroll
+    - toc.integrate          # Fold the right-hand "On this page" TOC into the left sidebar
     - search.suggest
     - search.highlight
     - content.code.copy
