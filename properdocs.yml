@@ -1,6 +1,6 @@
 site_name: Culinary Program Wiki
 theme:
-  name: material
+  name: materialx
   logo: assets/logo.png
   favicon: assets/favicon.png
   features:
@@ -35,20 +35,28 @@ plugins:
   - tags
   - awesome-pages
   - glightbox
-  - git-revision-date-localized:
-      type: date
-      enabled: !ENV [GIT_DATES, true]   # set GIT_DATES=false to skip per-file git calls during dev serve
-      fallback_to_build_date: true      # silence "no git logs" warnings for uncommitted pages
-  - macros
+  - document-dates:
+      show_author: false
   - callouts
   - exclude:
       glob:
         - drafts/*
         - _templates/*
+        - .obsidian/*   # Obsidian vault config — keep editor files out of the public site
   - redirects:
       redirect_maps:
-        # 'old/path.md': 'new/path.md'   # add mappings when you move/rename a page
-  - print-site
+        'culinary-1/yeast-breads.md': 'culinary-1/yeast-breads/index.md'
+  - exporter:
+      theme:
+        name: material   # materialx is a material-compatible fork; use the material handler
+      formats:
+        pdf:
+          enabled: true
+      buttons:
+        - title: Download as PDF
+          icon: material-file-download-outline
+          enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
+          attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes
 
 extra_css:
   - assets/stylesheets/extra.css

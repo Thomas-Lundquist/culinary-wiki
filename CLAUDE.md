@@ -4,25 +4,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A **ProperDocs + Material** static documentation site: a wiki for a culinary program. There is no application code — content lives in Markdown under `docs/`, and the build renders it to a static HTML site. Work here is mostly editing/adding Markdown pages and adjusting navigation.
+A **ProperDocs + MaterialX** static documentation site: a wiki for a culinary program. There is no application code — content lives in Markdown under `docs/`, and the build renders it to a static HTML site. Work here is mostly editing/adding Markdown pages and adjusting navigation.
 
-> [!note] Build driver is ProperDocs, not MkDocs
-> The site is built with **ProperDocs** — a drop-in continuation of MkDocs 1.x — driven from `properdocs.yml`. The `mkdocs` library and the `mkdocs-material` theme are still installed underneath (ProperDocs and the plugins depend on them); ProperDocs just replaces the CLI/build driver. Use `python -m properdocs`, not `python -m mkdocs`.
+> [!note] Build driver is ProperDocs, theme is MaterialX
+> The site is built with **ProperDocs** — a drop-in continuation of MkDocs 1.x — driven from `properdocs.yml`, using the **`materialx`** theme (a material-compatible fork of `mkdocs-material`). The `mkdocs` library is still installed underneath. Use `properdocs`, not `python -m mkdocs`.
+
+> [!warning] The toolchain lives in WSL (Ubuntu), not Windows
+> `properdocs`, `materialx`, and the plugins are installed in a **pipx** venv inside **WSL Ubuntu** (`/home/tklun/.local/share/pipx/venvs/properdocs`). They are NOT on the Windows PATH, and the Windows `python -m properdocs` resolves to a **stale pip env that only has `mkdocs-material`** — building through it fails with `Unrecognised theme name: 'materialx'`. Always drive builds by bridging into WSL:
+> ```bash
+> wsl.exe -e bash -lic 'cd /mnt/c/users/tklun/documents/projects/culinary-wiki && properdocs build'
+> ```
+> The `-l` (login) flag is required so `~/.local/bin` (the pipx shim dir) is on PATH.
 
 ## Commands
 
-Bare `properdocs` and `pip` are not on PATH in this environment — invoke through the interpreter with `python -m`:
+Run everything **inside WSL** (see the toolchain warning above). From a Windows shell, bridge in with `wsl.exe -e bash -lic '...'`; from an Ubuntu shell, drop the wrapper and run `properdocs ...` directly:
 
 ```bash
-python -m properdocs serve            # Live-reloading preview at http://127.0.0.1:8000 (use while editing)
-python -m properdocs build            # Render the static site into ./site (fails on broken config/plugins)
-python -m properdocs build --strict   # Treat warnings (e.g. broken links) as errors
+wsl.exe -e bash -lic 'cd /mnt/c/users/tklun/documents/projects/culinary-wiki && properdocs serve'          # Live preview at http://127.0.0.1:8000
+wsl.exe -e bash -lic 'cd /mnt/c/users/tklun/documents/projects/culinary-wiki && properdocs build'          # Render static site into ./site
+wsl.exe -e bash -lic 'cd /mnt/c/users/tklun/documents/projects/culinary-wiki && properdocs build --strict' # Treat warnings as errors
 ```
 
-Install dependencies from the pinned list before the first build:
+The toolchain is managed with **pipx**, not a `requirements.txt`. If the venv is ever rebuilt, restore the non-default extras:
 
 ```bash
-python -m pip install -r requirements.txt
+pipx install properdocs && pipx inject properdocs materialx mkdocs-exporter   # + the other plugins in properdocs.yml
+pipx runpip properdocs run playwright install chromium                        # PDF export needs a headless browser
+sudo $(pipx environment --value PIPX_LOCAL_VENVS)/properdocs/bin/python -m playwright install-deps chromium  # OS libs (libnspr4, etc.)
 ```
 
 ## Architecture
@@ -31,8 +40,9 @@ python -m pip install -r requirements.txt
 - **Section (folder) nav entries have exact syntax rules.** In a `.pages` `nav:`, reference a **page** with `Title: file.md` (e.g. `Home: index.md`), but reference a **folder** as a *bare* list item (`- core`) — `Title: folder` is treated as a link to a nonexistent `folder.md` and renders a broken tab. Give the folder its display name with a `title:` key inside *that folder's own* `.pages`. To make clicking the section/tab open its landing page (not the first child), enable `navigation.indexes` (already on) and list `- index.md` as the **first** item of that folder's `nav:`; it collapses into the section instead of showing as a duplicate row.
 - **Content is organized by course**, each a top-level section shown as a navigation tab (`navigation.tabs` feature): `core/` (Core Skills), `food-nutrition/`, `culinary-1/`, `culinary-2/`. `glossary.md` and `index.md` sit at the `docs/` root.
 - **Section landing pages** are `index.md` files inside each folder.
-- **`drafts/*` is excluded from builds** via the `exclude` plugin — put work-in-progress pages under a `drafts/` folder to keep them out of the published site.
-- **Git-dependent build.** The `git-revision-date-localized` plugin reads commit history to stamp page dates, so a page must be committed for its date to render; building a shallow/detached checkout can warn.
+- **`drafts/*`, `_templates/*`, and `.obsidian/*` are excluded from builds** via the `exclude` plugin. `docs/` is an **Obsidian vault**, so `.obsidian/` must stay excluded — otherwise the editor config leaks into the site *and* its stray stylesheets crash the PDF exporter's post-build step.
+- **Dates come from the `document-dates` plugin**, which reads git commit history — a page must be committed for its date to render. `show_author: false` is set so pages show dates but not commit authors (the plugin also supports `show_author: text` for a plain-text author with no link).
+- **PDF export via `mkdocs-exporter`.** Each page renders to a downloadable PDF (a "Download as PDF" button appears on the page), produced at build time with a headless Chromium. Because `mkdocs-exporter`'s theme factory hard-matches the theme *name* and would reject `materialx`, the plugin config sets `theme: {name: material}` to force the material handler (safe — materialx is material-compatible). An optional `aggregator` (currently off) can stitch all pages into one combined handbook PDF.
 
 ## Authoring conventions
 
