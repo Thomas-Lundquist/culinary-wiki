@@ -1,0 +1,4 @@
+---
+title: Deep-Fry
+tags:
+---
