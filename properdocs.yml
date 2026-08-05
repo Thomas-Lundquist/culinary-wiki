@@ -25,6 +25,9 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+extra:
+  generator: false   # Hide the "Made with Material for MkDocs" footer notice
+
 markdown_extensions:
   - admonition            # Renders the `!!! tip` blocks the callouts plugin emits
   - pymdownx.details      # Collapsible callouts (`> [!note]-`)
