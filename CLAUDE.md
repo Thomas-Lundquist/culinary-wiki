@@ -43,6 +43,9 @@ sudo $(pipx environment --value PIPX_LOCAL_VENVS)/properdocs/bin/python -m playw
 - **`drafts/*`, `_templates/*`, and `.obsidian/*` are excluded from builds** via the `exclude` plugin. `docs/` is an **Obsidian vault**, so `.obsidian/` must stay excluded — otherwise the editor config leaks into the site *and* its stray stylesheets crash the PDF exporter's post-build step.
 - **Dates come from the `document-dates` plugin**, which reads git commit history — a page must be committed for its date to render. `show_author: false` is set so pages show dates but not commit authors (the plugin also supports `show_author: text` for a plain-text author with no link).
 - **PDF export via `mkdocs-exporter`.** Each page renders to a downloadable PDF (a "Download as PDF" button appears on the page), produced at build time with a headless Chromium. Because `mkdocs-exporter`'s theme factory hard-matches the theme *name* and would reject `materialx`, the plugin config sets `theme: {name: material}` to force the material handler (safe — materialx is material-compatible). An optional `aggregator` (currently off) can stitch all pages into one combined handbook PDF.
+- **PDF rendering is gated behind the `ENABLE_PDF` env var** (`enabled: !ENV [ENABLE_PDF, false]`). It is **off by default** because rendering runs on every `serve`/`build` (incl. each live-reload) and takes ~40s for the full site. Turn it on only when you need PDFs:
+  - `ENABLE_PDF=true properdocs build` — full publish build with PDFs.
+  - `ENABLE_PDF=true properdocs serve --dirty` — live PDF preview; `--dirty` re-renders only the edited page (the exporter queues a render per rebuilt page, so dirty builds are incremental — no plugin-level cache exists). Do a clean `properdocs build` before publishing, since `--dirty` can leave nav/cross-page refs stale.
 
 ## Authoring conventions
 

@@ -51,7 +51,7 @@ plugins:
         name: material   # materialx is a material-compatible fork; use the material handler
       formats:
         pdf:
-          enabled: true
+          enabled: !ENV [ENABLE_PDF, false]   # off unless ENABLE_PDF=true — keeps serve/build fast
       buttons:
         - title: Download as PDF
           icon: material-file-download-outline
