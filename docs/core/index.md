@@ -11,5 +11,4 @@ All the basics of ***any*** culinary course - Equipment, Safety, Measurement, Mi
 - **[Kitchen Measurement](measurement/index.md)**
 - **[Mise en Place](mise-en-place/index.md)**
 - **[Kitchen Professionalism](professionalism/index.md)**
-- **[Kitchen Safety](safety/index.md)**
-- **[Kitchen Sanitation](sanitation/index.md)**
+- **[Kitchen Safety & Sanitation](safety-sanitation/index.md)**

@@ -1,8 +1,8 @@
 ---
-title: Career Pathways
+title: Knife Safety
 tags: []
 ---
 
-# Career Pathways
+# Knife Safety
 
 > TODO: fill in content

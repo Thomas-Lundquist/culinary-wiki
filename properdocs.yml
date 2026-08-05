@@ -1,4 +1,5 @@
-site_name: Culinary Program Wiki
+site_name: Skyline Culinary Wiki
+site_description: A wiki for the Skyline Culinary program
 theme:
   name: materialx
   logo: assets/logo.png

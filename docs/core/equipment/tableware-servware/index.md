@@ -1,15 +1,17 @@
 ---
-title: Professionalism
+title: Tableware & Serveware
 tags: []
 ---
-# Professionalism
+# Topic Name
 
 One sentence: what this topic cluster covers.
 
 ## Pages
 
-- **[Career Paths](career-paths/index.md)**
-- **[Hard & Soft Skills](hard-vs-soft-skills/index.md)**
+- [Page 1](page-1.md)
+- [Page 2](page-2.md)
+- [Page 3](page-3.md)
+
 ## Standards Covered
 
 - Strand X, Standard Y — [brief description]
