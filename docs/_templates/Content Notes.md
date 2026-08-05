@@ -13,7 +13,7 @@ how it connects to a grade).
 
 ## The Content
 
-[Main body — steps, technique, definition, comparison. Use content tabs, tables,
+Main body — steps, technique, definition, comparison. Use content tabs, tables,
 or admonitions as appropriate. This section varies most by page.]
 
 > [!warning]
@@ -21,4 +21,4 @@ or admonitions as appropriate. This section varies most by page.]
 
 ## Related Pages
 
-- [Related content note](../other-topic/related-page.md)
+- Content Link Placeholder[]()

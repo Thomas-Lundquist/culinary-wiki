@@ -7,9 +7,9 @@ tags: []
 One sentence: what this topic cluster covers.
 
 ## Pages
-- [Dry Heat Methods](culinary-1/cooking-techniques/dry-heat/index.md)
-- [Moist Heat Methods](culinary-1/cooking-techniques/moist-heat/index.md)
-- [Combination Methods](culinary-1/cooking-techniques/combination/index.md)
+- [Dry Heat Methods](dry-heat/index.md)
+- [Moist Heat Methods](moist-heat/index.md)
+- [Combination Methods](combination/index.md)
 
 ## Standards Covered
 

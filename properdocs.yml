@@ -36,6 +36,8 @@ plugins:
   - glightbox
   - git-revision-date-localized:
       type: date
+      enabled: !ENV [GIT_DATES, true]   # set GIT_DATES=false to skip per-file git calls during dev serve
+      fallback_to_build_date: true      # silence "no git logs" warnings for uncommitted pages
   - macros
   - callouts
   - exclude:
